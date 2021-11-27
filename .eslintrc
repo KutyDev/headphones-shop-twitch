@@ -1,0 +1,58 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "standard",
+    "plugin:react/recommended",
+    "airbnb-typescript",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": [
+        "build.ts",
+        "*.ts",
+        "*.tsx"
+      ],
+      "parserOptions": {
+        "project": [
+          "./tsconfig.json"
+        ]
+      }
+    }
+  ],
+  "plugins": [
+    "react",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react/jsx-no-undef": [
+      "error",
+      {
+        "allowGlobals": true
+      }
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "jsx-control-statements/jsx-use-if-tag": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "all"
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "react/require-default-props": 0,
+    "import/no-dynamic-require": 0,
+    "global-require": "off",
+    "no-plusplus": "off",
+    "@typescript-eslint/ban-ts-comment": 1,
+    "@typescript-eslint/no-use-before-define": 1
+  }
+}
